@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -10,7 +11,8 @@ class MainTest {
     @CsvSource({"Qwertyu, false",
             "Qwertyui12, true",
             "1234567, false",
-            "A1S2d3F4f5, true"})
+            "A1S2d3F4f5, true",
+            "abc123, false"})
     void istPasswordMindenstens8Zeichen(String password, boolean expected) {
         assertEquals(expected, Main.isPasswordLong(password));
     }
@@ -66,5 +68,16 @@ class MainTest {
             "qa23ed56$rfh98, true"})
     void istBesondereZeichen(String password, boolean expected) {
         assertEquals(expected, Main.isSpecialCharacters(password));
+    }
+
+    @Test
+    void generatePassword() {
+
+        String generatedPassword = Main.getNewPassword();
+
+        istPasswordMindenstens8Zeichen(generatedPassword, true);
+        istBuchstabe(generatedPassword, true);
+        istZiffern(generatedPassword, true);
+        istSchwachPassword(generatedPassword, false);
     }
 }
