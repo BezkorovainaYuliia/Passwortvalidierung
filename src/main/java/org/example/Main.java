@@ -10,12 +10,27 @@ public class Main {
     }
 
     public static boolean isNummers(String password) {
-        String nummers = "0123456789";
-        for(char c : password.toCharArray()) {
-            if(Character.isDigit(c)) {
+        for (char c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
                 return true;
             }
         }
-         return  false;
+        return false;
+    }
+
+    public static boolean isAlphabet(String password) {
+        boolean isOneBigLetter = false;
+        boolean isOneSmallLetter = false;
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isLowerCase(password.charAt(i))) {
+                isOneSmallLetter = true;
+            }
+            if (Character.isUpperCase(password.charAt(i))) {
+                isOneBigLetter = true;
+            }
+
+        }
+
+        return isOneBigLetter && isOneSmallLetter;
     }
 }

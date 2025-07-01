@@ -17,11 +17,24 @@ class MainTest {
 
     @ParameterizedTest
     @CsvSource({"Qwertyhj, false",
-    "qwer3Er345, true",
-    "123456788, true",
-    "qaedf$%^ghh, false"})
+            "qwer3Er345, true",
+            "123456788, true",
+            "qaedf$%^ghh, false"})
     void istZiffern(String password, boolean expected) {
         assertEquals(expected, Main.isNummers(password));
     }
+
+    @ParameterizedTest
+    @CsvSource({"Qwertyhj, true",
+            "qwer3Er345, true",
+            "123456788, false",
+            "qaedf$%^ghh, false",
+            "QWERRT123456, false",
+            "wqertyu1223dfgh, false",
+            "QWERTasdWERTdfg, true"})
+    void istBuchstabe(String password, boolean expected) {
+        assertEquals(expected, Main.isAlphabet(password));
+    }
+
 
 }
