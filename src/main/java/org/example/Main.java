@@ -65,12 +65,15 @@ public class Main {
         char abc;
         String Letters = "abcdefghijklmnopqrstuvwxyz";
         String numbers = "0123456789";
+        String specialCharacters = "!@#$%^&* ";
 
         abc = Character.toUpperCase(Letters.charAt(random.nextInt(Letters.length())));
         newPassword.append(abc);
         abc = Letters.charAt(random.nextInt(Letters.length()));
         newPassword.append(abc);
         abc = numbers.charAt(random.nextInt(numbers.length()));
+        newPassword.append(abc);
+        abc = specialCharacters.charAt(random.nextInt(specialCharacters.length()));
         newPassword.append(abc);
 
         for (int i = 0; i < 5; i++) {
@@ -85,7 +88,13 @@ public class Main {
 
             }
             else{
-               abc = numbers.charAt(random.nextInt(numbers.length()));
+                boolean isNumber = random.nextBoolean();
+                if (isNumber) {
+                    abc = numbers.charAt(random.nextInt(numbers.length()));
+                }else{
+                    abc = specialCharacters.charAt(random.nextInt(specialCharacters.length()));
+                }
+
             }
             newPassword.append(abc);
         }

@@ -79,5 +79,6 @@ class MainTest {
         istBuchstabe(generatedPassword, true);
         istZiffern(generatedPassword, true);
         istSchwachPassword(generatedPassword, false);
+        istBesondereZeichen(generatedPassword, true);
     }
 }
