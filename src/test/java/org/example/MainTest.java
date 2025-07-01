@@ -36,5 +36,21 @@ class MainTest {
         assertEquals(expected, Main.isAlphabet(password));
     }
 
+    @ParameterizedTest
+    @CsvSource({"qwerty, true",
+            "1234567890, true",
+            "password, true",
+            "qaedf$%^ghh, false",
+            "qwerty, true",
+            "wqertyu1223dfgh, false",
+            "00000000, true",
+            "passwort1, true",
+            "PASSWORD, true",
+            "q1w2e3r4t5y, true",
+            "qa23ed56$rfh98, false"})
+    void istSchwachPassword(String password, boolean expected) {
+        assertEquals(expected, Main.isBadPassword(password));
+    }
+
 
 }

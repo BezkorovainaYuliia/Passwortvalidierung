@@ -1,6 +1,8 @@
 package org.example;
 
 public class Main {
+    static String[] BAD_PASSWORDS = {"q1w2e3r4t5y", "passwort1", "password", "qwerty", "1234567890", "00000000", "abcdef", "qwerty123", "11111111"};
+
     public static void main(String[] args) {
         //System.out.printf("Hello and welcome!");
     }
@@ -32,5 +34,15 @@ public class Main {
         }
 
         return isOneBigLetter && isOneSmallLetter;
+    }
+
+    public static boolean isBadPassword(String password) {
+        String lowerCasePassword = password.toLowerCase();
+        for (String fuuuPassword : BAD_PASSWORDS) {
+            if (lowerCasePassword.equals(fuuuPassword)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
