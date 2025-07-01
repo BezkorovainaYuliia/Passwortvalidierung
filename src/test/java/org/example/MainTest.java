@@ -15,4 +15,13 @@ class MainTest {
         assertEquals(expected, Main.isPasswordLong(password));
     }
 
+    @ParameterizedTest
+    @CsvSource({"Qwertyhj, false",
+    "qwer3Er345, true",
+    "123456788, true",
+    "qaedf$%^ghh, false"})
+    void istZiffern(String password, boolean expected) {
+        assertEquals(expected, Main.isNummers(password));
+    }
+
 }
