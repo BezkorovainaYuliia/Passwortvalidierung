@@ -1,0 +1,44 @@
+Wiederholungsprojekt-Passwortvalidierung
+Einrichtung: GitHub-Projekt
+Heute schreiben wir eine Passwortvalidierung in Java! Es gibt viel zu tun, aber lasst uns Schritt für Schritt vorgehen.
+
+Erstelle ein neues Java-GitHub-Projekt. Wähle einen passenden Namen, z.B. “passwortvalidierung”. Beginne noch nicht mit dem Programmieren, sondern erstelle ein Projekt mit minimalem Code (z.B. Hallo Welt) und pushe es zu Github.
+Recherche: Signaturen definieren
+Überlege dir, wie die Methoden zur Passwortvalidierung aussehen sollten. Denke über Rückgabewerte, Parametertypen und Methodennamen nach und notiere sie. Implementiere in diesem Schritt jedoch nicht den eigentlichen Code der einzelnen Methoden. Folgende Methoden sind beteiligt:
+
+Eine Methode, die sicherstellt, dass ein Passwort mindestens 8 Zeichen lang ist.
+
+Mit einer anderen Methode soll überprüft werden, ob das Passwort Ziffern enthält.
+
+Zusätzlich soll mit einer Methode sichergestellt werden, dass sowohl Groß- als auch Kleinbuchstaben im Passwort verwendet werden.
+
+Und eine Methode soll häufig verwendete Passwörter erkennen.
+
+Programmierung: Passwortlänge
+Jetzt werden wir die Funktionen testgetrieben implementieren. Denke daran, Commits zu machen, um deinen Fortschritt zu verfolgen.
+
+Schreibe einen Test für die Methode mit der Passwortlänge.
+Implementiere die Funktionalität zur Überprüfung der Passwortlänge.
+Definiere zusätzliche Testmethoden für verschiedene Passwörter. Wähle aus deiner Sicht eine optimale Anzahl von Tests.
+Programmierung: Ziffern
+Jetzt werden wir die Funktionen testgetrieben implementieren.
+
+Auch hier definierst du zuerst eine Testmethode. Sie soll die Methode verwenden, die prüft, ob ein Passwort Ziffern enthält.
+Implementiere die Funktionalität.
+Definiere zusätzliche Testmethoden für verschiedene Passwörter.
+Programmierung: Groß- und Kleinbuchstaben
+Jetzt werden wir die Funktionen testgetrieben implementieren.
+
+Schreibe nun testgetrieben die Funktion, um sicherzustellen, dass sowohl Groß- als auch Kleinbuchstaben im Passwort vorkommen.
+Programmierung: Häufig verwendete Passwörter
+Jetzt werden wir die Funktionen testgetrieben implementieren.
+
+Schreibe nun testgetrieben die Funktion, um zu prüfen, ob das Passwort schwache Passwörter wie “Passwort1” oder “Aa345678” enthält.
+Programmierung: Bonusaufgabe
+Wenn du mit der Hauptaufgabe bereits fertig bist, kannst du dich an den Bonusaufgaben versuchen.
+
+Erweitere die Passwortvalidierung, um zu prüfen, ob das Passwort Sonderzeichen enthält.
+Bonus: Zufälliges Passwort
+Wenn du mit der Hauptaufgabe bereits fertig bist, kannst du dich an den Bonusaufgaben versuchen.
+
+Implementiere eine Funktion, die jedes Mal ein zufälliges sicheres Passwort generiert, das die in deinen zuvor definierten Methoden festgelegten Kriterien erfüllt.
