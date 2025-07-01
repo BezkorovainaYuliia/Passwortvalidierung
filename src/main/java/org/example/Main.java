@@ -45,4 +45,14 @@ public class Main {
         }
         return false;
     }
+
+    public static boolean isSpecialCharacters(String password) {
+        String specialCharacters = "!@#$%^&* ";
+        for (char specialChar : specialCharacters.toCharArray()) {
+            if (password.contains(specialChar + "")) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

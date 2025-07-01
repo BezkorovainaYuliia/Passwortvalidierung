@@ -52,5 +52,19 @@ class MainTest {
         assertEquals(expected, Main.isBadPassword(password));
     }
 
-
+    @ParameterizedTest
+    @CsvSource({"qwerty, false",
+            "1234567890, false",
+            "password$, true",
+            "qaedf$%^ghh, true",
+            "@qwerty, true",
+            "wqertyu1223dfgh, false",
+            "0000_0000, false",
+            "pass wort1, true",
+            "PASSWORD, false",
+            "q1w2e3r4t5y, false",
+            "qa23ed56$rfh98, true"})
+    void istBesondereZeichen(String password, boolean expected) {
+        assertEquals(expected, Main.isSpecialCharacters(password));
+    }
 }
